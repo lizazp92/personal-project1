@@ -1,0 +1,85 @@
+.main-navigation {
+  height: 100vh;
+  width: 100%;
+  position: fixed;
+  z-index: 2;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 10%;
+  background-color: #5474fd;
+  padding: 0 1.25rem;
+  text-transform: uppercase;
+  color: inherit;
+}
+.main-navigation .company-logo {
+  margin-left: 15%;
+}
+.main-navigation .company-logo a:hover, .main-navigation .company-logo a:active {
+  color: black;
+}
+.main-navigation .pages-navigation {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  margin-right: 10%;
+}
+.main-navigation .pages-navigation .btn {
+  display: none;
+  border: none;
+  background-color: transparent;
+}
+.main-navigation .pages-navigation .btn .icon {
+  font-size: 2rem;
+  color: white;
+  cursor: pointer;
+}
+.main-navigation .pages-navigation ul {
+  list-style: none;
+}
+.main-navigation .pages-navigation ul li {
+  display: inline-block;
+  margin: 0 0.9rem;
+  padding: 0.6rem;
+}
+.main-navigation .pages-navigation ul li a {
+  font-family: "Aleo", serif;
+  font-size: 0.8rem;
+}
+.main-navigation .pages-navigation ul li:hover, .main-navigation .pages-navigation ul li:active {
+  background-color: #3b52b9;
+}
+.main-navigation .pages-navigation .active {
+  left: 0;
+}
+@media (max-width: 990px) {
+  .main-navigation .pages-navigation .btn {
+    display: block;
+  }
+  .main-navigation .pages-navigation ul {
+    position: fixed;
+    bottom: 8%;
+    left: -100vw;
+    background-color: rgba(128, 128, 128, 0.6);
+    height: 20vh;
+    width: 100%;
+    transition: left 1000ms ease;
+    padding: 1rem 0;
+  }
+  .main-navigation .pages-navigation ul li {
+    display: block;
+    text-align: center;
+  }
+}
+@media ((min-width: 991px) and (max-width: 1100px)) {
+  .main-navigation .pages-navigation {
+    margin-right: 5%;
+  }
+  .main-navigation .pages-navigation ul li {
+    margin: 0 0.6rem;
+  }
+}
+
+/*# sourceMappingURL=navbar.css.map */
