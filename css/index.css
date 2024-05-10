@@ -27,6 +27,10 @@
   font-size: 1.5rem;
 }
 
+.f-s36 {
+  font-size: 2.25rem;
+}
+
 .fw-700 {
   font-weight: 700;
 }
@@ -35,8 +39,16 @@
   line-height: 1.1;
 }
 
+.lh-16 {
+  line-height: 1.6;
+}
+
 .lh-18 {
   line-height: 1.8;
+}
+
+.ls-16 {
+  letter-spacing: 1.6px;
 }
 
 .ls-24 {
@@ -47,13 +59,20 @@
   letter-spacing: 2.8px;
 }
 
+.pb-15 {
+  padding-bottom: 0.9rem;
+}
+
+.hero-page__content-title h1, body {
+  margin: 0;
+  padding: 0;
+}
+
 * {
   box-sizing: border-box;
 }
 
 body {
-  padding: 0;
-  margin: 0;
   font-family: "Josefin Sans", sans-serif;
   font-size: 16px;
   font-weight: 400;
@@ -74,15 +93,21 @@ a {
   border: none;
   letter-spacing: 1.4px;
 }
-.primary-btn:hover, .primary-btn:active {
+.primary-btn:hover {
   background-color: #3b52b9;
 }
-.primary-btn:focus {
+.primary-btn:active {
   background-color: #7788d2;
 }
 
+h2 {
+  font-family: "Aleo", serif;
+  font-size: 2.25rem;
+  padding-bottom: 1.5rem;
+}
+
 .hero-page {
-  height: 100vh;
+  height: 88vh;
   width: 100%;
   background-repeat: no-repeat;
   background-size: cover;
@@ -95,8 +120,6 @@ a {
   padding-top: 12%;
 }
 .hero-page__content-title h1 {
-  margin: 0;
-  padding: 0;
   font-size: 3rem;
   letter-spacing: 4.8px;
   text-transform: uppercase;
@@ -137,6 +160,9 @@ a {
   right: 0;
   top: 0;
   box-shadow: inset 0px 0px 0px 2px white;
+}
+.hero-page__content .search-container form button[type=submit]:focus {
+  box-shadow: none;
 }
 .hero-page__content .search-container form button[type=submit] span {
   position: relative;
@@ -184,6 +210,145 @@ a {
   .hero-page .search-container form input[type=text] {
     padding-left: 2%;
   }
+}
+
+.why-us {
+  height: 100vh;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url(../img/page2/bg.png);
+  display: flex;
+  justify-content: space-between;
+  padding: 0 15%;
+}
+.why-us__description {
+  width: 55vw;
+  padding-top: 15%;
+}
+.why-us__description p {
+  color: #e8e8e8;
+}
+.why-us__description button {
+  width: 36%;
+  height: 55px;
+}
+.why-us__pictures {
+  width: 40vw;
+  position: relative;
+}
+.why-us__pictures img {
+  width: 75%;
+  height: auto;
+  transition: 500ms ease-in-out;
+}
+.why-us__pictures img:hover, .why-us__pictures img:active {
+  width: 100%;
+  z-index: 2;
+}
+.why-us__pictures .img1 {
+  position: absolute;
+  top: 15%;
+  left: 10%;
+}
+.why-us__pictures .img2 {
+  position: absolute;
+  top: 50%;
+  left: 32%;
+}
+@media (max-width: 750px) {
+  .why-us {
+    background-position: top 10% left 20%;
+    display: block;
+    padding: 0 5%;
+  }
+  .why-us__description {
+    width: 100%;
+    padding-top: 10%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .why-us__description button {
+    width: 50vw;
+  }
+  .why-us__pictures {
+    width: 100%;
+    height: auto;
+  }
+  .why-us__pictures .img1 {
+    padding-top: 10%;
+    width: 350px;
+    z-index: 0;
+  }
+  .why-us__pictures .img1:hover, .why-us__pictures .img1:active {
+    z-index: 0;
+    width: 350px;
+  }
+  .why-us__pictures .img2 {
+    display: none;
+  }
+}
+
+.search-places {
+  padding: 0 15%;
+  height: 44vh;
+  width: 100%;
+  background-color: #333333;
+  position: relative;
+}
+.search-places__line {
+  position: absolute;
+  top: 15%;
+  left: 26.5%;
+  width: 50%;
+  height: 30%;
+}
+.search-places__points {
+  display: flex;
+  justify-content: space-evenly;
+  padding-top: 6rem;
+  margin: 0;
+  gap: 7rem;
+}
+.search-places__points li {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.search-places__points li .helper-rectangle {
+  position: absolute;
+  top: 30%;
+  left: 25%;
+  width: 40px;
+  height: 40px;
+  background-color: #333333;
+  z-index: 1;
+}
+.search-places__points li .helper-rectangle1 {
+  top: 37%;
+  left: 50%;
+}
+.search-places__points li .helper-rectangle2 {
+  top: 40%;
+  left: 74%;
+}
+.search-places__points li .fa-solid,
+.search-places__points li .fa-regular {
+  font-size: 45px;
+  z-index: 2;
+  color: #5474fd;
+}
+.search-places__points li .fa-circle-check {
+  color: #ff6363;
+}
+.search-places__points li span {
+  padding-top: 1rem;
+}
+.search-places__description {
+  display: block;
 }
 
 /*# sourceMappingURL=index.css.map */

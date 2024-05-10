@@ -27,6 +27,10 @@
   font-size: 1.5rem;
 }
 
+.f-s36 {
+  font-size: 2.25rem;
+}
+
 // FONT WEIGHT
 
 .fw-700 {
@@ -39,11 +43,19 @@
   line-height: 1.1;
 }
 
+.lh-16 {
+  line-height: 1.6;
+}
+
 .lh-18 {
   line-height: 1.8;
 }
 
 // LETTER-SPACING
+
+.ls-16 {
+  letter-spacing: 1.6px;
+}
 
 .ls-24 {
   letter-spacing: 2.4px;
@@ -53,16 +65,25 @@
   letter-spacing: 2.8px;
 }
 
+// PADDINGS
+
+.pb-15 {
+  padding-bottom: 0.9rem;
+}
+
 //HELPER CLASSES
+
+%mp-0 {
+  margin: 0;
+  padding: 0;
+}
 
 * {
   box-sizing: border-box;
 }
 
 body {
-  padding: 0;
-  margin: 0;
-
+  @extend %mp-0;
   font-family: "Josefin Sans", sans-serif;
   font-size: 16px;
   font-weight: 400;
@@ -82,19 +103,27 @@ a {
   color: inherit;
   border: none;
   letter-spacing: 1.4px;
-  &:hover,
-  &:active {
+  &:hover {
     background-color: $primary-bg-hover;
   }
-  &:focus {
+  // &:active {
+  //   background-color: black;
+  // }
+  &:active {
     background-color: $primary-bg-focus;
   }
+}
+
+h2 {
+  font-family: "Aleo", serif;
+  font-size: 2.25rem;
+  padding-bottom: 1.5rem;
 }
 
 // HERO PAGE
 
 .hero-page {
-  height: 100vh;
+  height: 88vh;
   width: 100%;
   background-repeat: no-repeat;
   background-size: cover;
@@ -108,8 +137,7 @@ a {
 
     &-title {
       h1 {
-        margin: 0;
-        padding: 0;
+        @extend %mp-0;
         font-size: 3rem;
         letter-spacing: 4.8px;
         text-transform: uppercase;
@@ -152,6 +180,9 @@ a {
           right: 0;
           top: 0;
           box-shadow: inset 0px 0px 0px 2px $primary-color;
+          &:focus {
+            box-shadow: none;
+          }
           span {
             position: relative;
             top: -5px;
@@ -211,5 +242,152 @@ a {
         }
       }
     }
+  }
+}
+
+// WHY US SECTION
+
+.why-us {
+  height: 100vh;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url(../img/page2/bg.png);
+  display: flex;
+  justify-content: space-between;
+  padding: 0 15%;
+  &__description {
+    width: 55vw;
+    padding-top: 15%;
+
+    p {
+      color: $description-color;
+    }
+    button {
+      width: 36%;
+      height: 55px;
+    }
+  }
+  &__pictures {
+    width: 40vw;
+    position: relative;
+    img {
+      width: 75%;
+      height: auto;
+      transition: 500ms ease-in-out;
+      &:hover,
+      &:active {
+        width: 100%;
+        z-index: 2;
+      }
+    }
+    .img1 {
+      position: absolute;
+      top: 15%;
+      left: 10%;
+    }
+    .img2 {
+      position: absolute;
+      top: 50%;
+      left: 32%;
+    }
+  }
+
+  @media (max-width: 750px) {
+    background-position: top 10% left 20%;
+    display: block;
+    padding: 0 5%;
+    &__description {
+      width: 100%;
+      padding-top: 10%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      button {
+        width: 50vw;
+      }
+    }
+    &__pictures {
+      width: 100%;
+      height: auto;
+
+      .img1 {
+        padding-top: 10%;
+        width: 350px;
+        z-index: 0;
+        &:hover,
+        &:active {
+          z-index: 0;
+          width: 350px;
+        }
+      }
+      .img2 {
+        display: none;
+      }
+    }
+  }
+}
+
+.search-places {
+  padding: 0 15%;
+  height: 44vh;
+  width: 100%;
+  background-color: #333333;
+  position: relative;
+
+  &__line {
+    position: absolute;
+    top: 15%;
+    left: 26.5%;
+    width: 50%;
+    height: 30%;
+  }
+  &__points {
+    display: flex;
+    justify-content: space-evenly;
+    padding-top: 6rem;
+    margin: 0;
+    gap: 7rem;
+    li {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      .helper-rectangle {
+        position: absolute;
+        top: 30%;
+        left: 25%;
+        width: 40px;
+        height: 40px;
+        background-color: #333333;
+        z-index: 1;
+      }
+      .helper-rectangle1 {
+        top: 37%;
+        left: 50%;
+      }
+      .helper-rectangle2 {
+        top: 40%;
+        left: 74%;
+      }
+      .fa-solid,
+      .fa-regular {
+        font-size: 45px;
+        z-index: 2;
+        color: #5474fd;
+      }
+      .fa-circle-check {
+        color: #ff6363;
+      }
+
+      span {
+        padding-top: 1rem;
+      }
+    }
+  }
+  &__description {
+    display: block;
   }
 }
