@@ -1,3 +1,11 @@
+// FLEXBOX
+
+@mixin d-flex-column-center {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
 @mixin animation($args) {
   -webkit-animation: $args;
   animation: $args;
@@ -7,4 +15,15 @@
   -webkit-transform: $args;
   -ms-transform: $args;
   transform: $args;
+}
+
+@mixin mp-0 {
+  margin: 0;
+  padding: 0;
+}
+
+@mixin background-image($img) {
+  background-image: url("#{$img}");
+  background-repeat: no-repeat;
+  background-size: cover;
 }

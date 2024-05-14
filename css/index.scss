@@ -83,17 +83,12 @@
 
 //HELPER CLASSES
 
-%mp-0 {
-  margin: 0;
-  padding: 0;
-}
-
 * {
   box-sizing: border-box;
 }
 
 body {
-  @extend %mp-0;
+  @include mp-0;
   font-family: "Josefin Sans", sans-serif;
   font-size: 16px;
   font-weight: 400;
@@ -116,9 +111,6 @@ a {
   &:hover {
     background-color: $primary-bg-hover;
   }
-  // &:active {
-  //   background-color: black;
-  // }
   &:active {
     background-color: $primary-bg-focus;
   }
@@ -135,19 +127,13 @@ h2 {
 .hero-page {
   height: 88vh;
   width: 100%;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-image: url(../img/index/hero-bg.png);
-
+  @include background-image("../img/index/hero-bg.png");
   &__content {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
+    @include d-flex-column-center;
     padding-top: 12%;
-
     &-title {
       h1 {
-        @extend %mp-0;
+        @include mp-0;
         font-size: 3rem;
         letter-spacing: 4.8px;
         text-transform: uppercase;
@@ -260,9 +246,7 @@ h2 {
 .why-us {
   height: 100vh;
   width: 100%;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-image: url(../img/page2/bg.png);
+  @include background-image("../img/page2/bg.png");
   display: flex;
   justify-content: space-between;
   padding: 0 15%;
@@ -310,9 +294,7 @@ h2 {
     &__description {
       width: 100%;
       padding-top: 10%;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
+      @include d-flex-column-center;
 
       button {
         width: 50vw;
@@ -363,10 +345,9 @@ h2 {
     li {
       z-index: 2;
       list-style: none;
-      display: flex;
-      flex-direction: column;
+      @include d-flex-column-center;
       justify-content: center;
-      align-items: center;
+
       &:hover {
         @include animation(wiggle 2000ms ease-out infinite);
         color: $primary-bg-focus;
@@ -385,9 +366,7 @@ h2 {
 .section-4 {
   height: 100vh;
   width: 100%;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-image: url(../img/page4/grand-spain-1.png);
+  @include background-image("../img/page4/grand-spain-1.png");
   position: relative;
   &__description {
     position: absolute;
@@ -415,9 +394,7 @@ h2 {
 .section-5 {
   height: 100vh;
   width: 100%;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-image: url(../img/page5/grand-spain-2.png);
+  @include background-image("../img/page5/grand-spain-2.png");
   position: relative;
   &__description {
     position: absolute;
@@ -444,9 +421,7 @@ h2 {
 .section-6 {
   height: 100vh;
   width: 100%;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-image: url(../img/page6/what-our-tourists-say.png);
+  @include background-image("../img/page6/what-our-tourists-say.png");
   position: relative;
   // display: flex;
   // justify-content: center;
@@ -487,22 +462,26 @@ h2 {
 }
 
 .footer {
-  // padding: 0 15%;
+  padding-top: 2rem;
   height: 30vh;
   width: 100%;
   background-color: #333333;
-  display: flex;
+  @include d-flex-column-center;
   justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  // position: relative;
-  h4 {
-    margin-top: 4rem;
+  .company-logo {
     text-transform: uppercase;
+  }
+  h4 {
+    // margin-top: 5rem;
+    text-transform: uppercase;
+  }
+  span {
+    padding: 0.5rem 0 1.5rem 0;
   }
   .social-media-icons {
     img {
-      height: 26px;
+      height: 15px;
+      padding: 0 0.25rem;
     }
   }
 }

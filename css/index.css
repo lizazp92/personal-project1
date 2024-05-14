@@ -132,16 +132,13 @@
   padding-bottom: 0.9rem;
 }
 
-.hero-page__content-title h1, body {
-  margin: 0;
-  padding: 0;
-}
-
 * {
   box-sizing: border-box;
 }
 
 body {
+  margin: 0;
+  padding: 0;
   font-family: "Josefin Sans", sans-serif;
   font-size: 16px;
   font-weight: 400;
@@ -178,9 +175,9 @@ h2 {
 .hero-page {
   height: 88vh;
   width: 100%;
+  background-image: url("../img/index/hero-bg.png");
   background-repeat: no-repeat;
   background-size: cover;
-  background-image: url(../img/index/hero-bg.png);
 }
 .hero-page__content {
   display: flex;
@@ -189,6 +186,8 @@ h2 {
   padding-top: 12%;
 }
 .hero-page__content-title h1 {
+  margin: 0;
+  padding: 0;
   font-size: 3rem;
   letter-spacing: 4.8px;
   text-transform: uppercase;
@@ -284,9 +283,9 @@ h2 {
 .why-us {
   height: 100vh;
   width: 100%;
+  background-image: url("../img/page2/bg.png");
   background-repeat: no-repeat;
   background-size: cover;
-  background-image: url(../img/page2/bg.png);
   display: flex;
   justify-content: space-between;
   padding: 0 15%;
@@ -335,8 +334,8 @@ h2 {
     width: 100%;
     padding-top: 10%;
     display: flex;
-    flex-direction: column;
     align-items: center;
+    flex-direction: column;
   }
   .why-us__description button {
     width: 50vw;
@@ -385,9 +384,9 @@ h2 {
   z-index: 2;
   list-style: none;
   display: flex;
+  align-items: center;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
 }
 .search-places__points li:hover {
   -webkit-animation: wiggle 2000ms ease-out infinite;
@@ -404,9 +403,9 @@ h2 {
 .section-4 {
   height: 100vh;
   width: 100%;
+  background-image: url("../img/page4/grand-spain-1.png");
   background-repeat: no-repeat;
   background-size: cover;
-  background-image: url(../img/page4/grand-spain-1.png);
   position: relative;
 }
 .section-4__description {
@@ -433,9 +432,9 @@ h2 {
 .section-5 {
   height: 100vh;
   width: 100%;
+  background-image: url("../img/page5/grand-spain-2.png");
   background-repeat: no-repeat;
   background-size: cover;
-  background-image: url(../img/page5/grand-spain-2.png);
   position: relative;
 }
 .section-5__description {
@@ -462,9 +461,9 @@ h2 {
 .section-6 {
   height: 100vh;
   width: 100%;
+  background-image: url("../img/page6/what-our-tourists-say.png");
   background-repeat: no-repeat;
   background-size: cover;
-  background-image: url(../img/page6/what-our-tourists-say.png);
   position: relative;
 }
 .section-6 h3 {
@@ -501,20 +500,27 @@ h2 {
 }
 
 .footer {
+  padding-top: 2rem;
   height: 30vh;
   width: 100%;
   background-color: #333333;
   display: flex;
-  justify-content: center;
   align-items: center;
   flex-direction: column;
+  justify-content: center;
 }
-.footer h4 {
-  margin-top: 4rem;
+.footer .company-logo {
   text-transform: uppercase;
 }
+.footer h4 {
+  text-transform: uppercase;
+}
+.footer span {
+  padding: 0.5rem 0 1.5rem 0;
+}
 .footer .social-media-icons img {
-  height: 26px;
+  height: 15px;
+  padding: 0 0.25rem;
 }
 
 /*# sourceMappingURL=index.css.map */
