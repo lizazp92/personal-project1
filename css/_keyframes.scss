@@ -10,3 +10,68 @@
     transform: translateY(0px);
   }
 }
+
+@-webkit-keyframes wiggle {
+  0%,
+  7% {
+    -webkit-transform: rotateZ(0);
+    transform: rotateZ(0);
+  }
+  15% {
+    -webkit-transform: rotateZ(-12deg);
+    transform: rotateZ(-12deg);
+  }
+  20% {
+    -webkit-transform: rotateZ(9deg);
+    transform: rotateZ(9deg);
+  }
+  25% {
+    -webkit-transform: rotateZ(-9deg);
+    transform: rotateZ(-9deg);
+  }
+  30% {
+    -webkit-transform: rotateZ(6deg);
+    transform: rotateZ(6deg);
+  }
+  35% {
+    -webkit-transform: rotateZ(-4deg);
+    transform: rotateZ(-4deg);
+  }
+  40%,
+  100% {
+    -webkit-transform: rotateZ(0);
+    transform: rotateZ(0);
+  }
+}
+@keyframes wiggle {
+  0%,
+  7% {
+    -webkit-transform: rotateZ(0);
+    transform: rotateZ(0);
+  }
+  15% {
+    -webkit-transform: rotateZ(-12deg);
+    transform: rotateZ(-12deg);
+  }
+  20% {
+    -webkit-transform: rotateZ(9deg);
+    transform: rotateZ(9deg);
+  }
+  25% {
+    -webkit-transform: rotateZ(-9deg);
+    transform: rotateZ(-9deg);
+  }
+  30% {
+    -webkit-transform: rotateZ(6deg);
+    transform: rotateZ(6deg);
+  }
+  35% {
+    -webkit-transform: rotateZ(-4deg);
+    transform: rotateZ(-4deg);
+  }
+  40%,
+  100% {
+    -webkit-transform: rotateZ(0);
+    transform: rotateZ(0);
+  }
+}

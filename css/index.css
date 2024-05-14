@@ -11,12 +11,81 @@
     transform: translateY(0px);
   }
 }
+@-webkit-keyframes wiggle {
+  0%, 7% {
+    -webkit-transform: rotateZ(0);
+    transform: rotateZ(0);
+  }
+  15% {
+    -webkit-transform: rotateZ(-12deg);
+    transform: rotateZ(-12deg);
+  }
+  20% {
+    -webkit-transform: rotateZ(9deg);
+    transform: rotateZ(9deg);
+  }
+  25% {
+    -webkit-transform: rotateZ(-9deg);
+    transform: rotateZ(-9deg);
+  }
+  30% {
+    -webkit-transform: rotateZ(6deg);
+    transform: rotateZ(6deg);
+  }
+  35% {
+    -webkit-transform: rotateZ(-4deg);
+    transform: rotateZ(-4deg);
+  }
+  40%, 100% {
+    -webkit-transform: rotateZ(0);
+    transform: rotateZ(0);
+  }
+}
+@keyframes wiggle {
+  0%, 7% {
+    -webkit-transform: rotateZ(0);
+    transform: rotateZ(0);
+  }
+  15% {
+    -webkit-transform: rotateZ(-12deg);
+    transform: rotateZ(-12deg);
+  }
+  20% {
+    -webkit-transform: rotateZ(9deg);
+    transform: rotateZ(9deg);
+  }
+  25% {
+    -webkit-transform: rotateZ(-9deg);
+    transform: rotateZ(-9deg);
+  }
+  30% {
+    -webkit-transform: rotateZ(6deg);
+    transform: rotateZ(6deg);
+  }
+  35% {
+    -webkit-transform: rotateZ(-4deg);
+    transform: rotateZ(-4deg);
+  }
+  40%, 100% {
+    -webkit-transform: rotateZ(0);
+    transform: rotateZ(0);
+  }
+}
+@font-face {
+  font-family: fontAwesome;
+  font-weight: 400;
+  src: url("../assets/fonts/Awesome-regular-400.otf") format("opentype");
+}
 .ff-aleo {
   font-family: "Aleo", serif;
 }
 
 .f-s14 {
   font-size: 0.8rem;
+}
+
+.f-s20 {
+  font-size: 1.25rem;
 }
 
 .f-s22 {
@@ -299,56 +368,153 @@ h2 {
 }
 .search-places__line {
   position: absolute;
-  top: 15%;
-  left: 26.5%;
+  top: 18%;
+  left: 26.3%;
   width: 50%;
   height: 30%;
+  z-index: 1;
 }
 .search-places__points {
   display: flex;
   justify-content: space-evenly;
-  padding-top: 6rem;
+  padding-top: 5.5rem;
   margin: 0;
   gap: 7rem;
 }
 .search-places__points li {
+  z-index: 2;
   list-style: none;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
-.search-places__points li .helper-rectangle {
-  position: absolute;
-  top: 30%;
-  left: 25%;
-  width: 40px;
-  height: 40px;
-  background-color: #333333;
-  z-index: 1;
-}
-.search-places__points li .helper-rectangle1 {
-  top: 37%;
-  left: 50%;
-}
-.search-places__points li .helper-rectangle2 {
-  top: 40%;
-  left: 74%;
-}
-.search-places__points li .fa-solid,
-.search-places__points li .fa-regular {
-  font-size: 45px;
-  z-index: 2;
-  color: #5474fd;
-}
-.search-places__points li .fa-circle-check {
-  color: #ff6363;
+.search-places__points li:hover {
+  -webkit-animation: wiggle 2000ms ease-out infinite;
+  animation: wiggle 2000ms ease-out infinite;
+  color: #7788d2;
 }
 .search-places__points li span {
   padding-top: 1rem;
 }
 .search-places__description {
   display: block;
+}
+
+.section-4 {
+  height: 100vh;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url(../img/page4/grand-spain-1.png);
+  position: relative;
+}
+.section-4__description {
+  position: absolute;
+  top: 33%;
+  left: 20%;
+  width: 460px;
+  min-height: 300px;
+  background-color: rgba(35, 35, 35, 0.8705882353);
+  padding: 2rem;
+}
+.section-4__description h4 {
+  text-transform: uppercase;
+  margin: 1rem 0;
+}
+.section-4__description p {
+  margin-top: 0;
+}
+.section-4__description button {
+  margin-top: 1rem;
+  padding: 1rem 3.5rem;
+}
+
+.section-5 {
+  height: 100vh;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url(../img/page5/grand-spain-2.png);
+  position: relative;
+}
+.section-5__description {
+  position: absolute;
+  top: 33%;
+  left: 55%;
+  width: 460px;
+  min-height: 300px;
+  background-color: rgba(35, 35, 35, 0.8705882353);
+  padding: 2rem;
+}
+.section-5__description h4 {
+  text-transform: uppercase;
+  margin: 1rem 0;
+}
+.section-5__description p {
+  margin-top: 0;
+}
+.section-5__description button {
+  margin-top: 1rem;
+  padding: 1rem 3.5rem;
+}
+
+.section-6 {
+  height: 100vh;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url(../img/page6/what-our-tourists-say.png);
+  position: relative;
+}
+.section-6 h3 {
+  text-align: center;
+  margin: 0;
+  padding: 5rem 0;
+}
+.section-6__content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 230px;
+}
+.section-6__content .section-6__content-img {
+  width: 360px;
+  height: 100%;
+}
+.section-6__content-description {
+  height: 230px;
+  max-width: 43vw;
+  padding-left: 2.5rem;
+  padding-right: 1rem;
+  font-family: fontAwesome, sans-serif;
+  background-color: #333333;
+}
+.section-6__content-description h4 {
+  text-transform: uppercase;
+  padding-top: 1rem;
+  margin-bottom: -0.8rem;
+}
+.section-6__content-description img {
+  width: 2rem;
+  margin-bottom: -0.5rem;
+}
+
+.footer {
+  height: 30vh;
+  width: 100%;
+  background-color: #333333;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.footer h4 {
+  margin-top: 4rem;
+  text-transform: uppercase;
+}
+.footer .social-media-icons img {
+  height: 26px;
 }
 
 /*# sourceMappingURL=index.css.map */

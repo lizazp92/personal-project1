@@ -1,0 +1,10 @@
+@mixin animation($args) {
+  -webkit-animation: $args;
+  animation: $args;
+}
+
+@mixin transform($args) {
+  -webkit-transform: $args;
+  -ms-transform: $args;
+  transform: $args;
+}
