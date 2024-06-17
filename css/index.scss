@@ -19,6 +19,42 @@
   font-family: "Aleo", serif;
 }
 
+//HELPER CLASSES
+
+* {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  @include mp-0;
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  color: $primary-color;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.primary-btn {
+  text-transform: uppercase;
+  background-color: $primary-bg;
+  font-family: "Aleo", serif;
+  font-size: 0.8rem;
+  color: inherit;
+  border: none;
+  letter-spacing: 1.4px;
+  &:hover {
+    background-color: $primary-bg-hover;
+  }
+  &:active {
+    background-color: $primary-bg-focus;
+  }
+}
+
 // FONT SIZES
 
 .f-s14 {
@@ -39,6 +75,10 @@
 
 .f-s36 {
   font-size: 2.25rem;
+}
+
+.f-s48 {
+  font-size: 3rem;
 }
 
 // FONT WEIGHT
@@ -74,56 +114,25 @@
 .ls-28 {
   letter-spacing: 2.8px;
 }
+.ls-48 {
+  letter-spacing: 4.8px;
+}
+
+.ls-68 {
+  letter-spacing: 6.8px;
+}
+
+//UPPERCASE
+.text-upper-case {
+  text-transform: uppercase;
+}
 
 // PADDINGS
-
 .pb-15 {
   padding-bottom: 0.9rem;
 }
 
-//HELPER CLASSES
-
-* {
-  box-sizing: border-box;
-}
-
-body {
-  @include mp-0;
-  font-family: "Josefin Sans", sans-serif;
-  font-size: 16px;
-  font-weight: 400;
-  color: $primary-color;
-}
-
-a {
-  text-decoration: none;
-  color: inherit;
-}
-
-.primary-btn {
-  text-transform: uppercase;
-  background-color: $primary-bg;
-  font-family: "Aleo", serif;
-  font-size: 0.8rem;
-  color: inherit;
-  border: none;
-  letter-spacing: 1.4px;
-  &:hover {
-    background-color: $primary-bg-hover;
-  }
-  &:active {
-    background-color: $primary-bg-focus;
-  }
-}
-
-h2 {
-  font-family: "Aleo", serif;
-  font-size: 2.25rem;
-  padding-bottom: 1.5rem;
-}
-
 // HERO PAGE
-
 .hero-page {
   height: 88vh;
   width: 100%;
@@ -134,20 +143,16 @@ h2 {
     &-title {
       h1 {
         @include mp-0;
-        font-size: 3rem;
-        letter-spacing: 4.8px;
-        text-transform: uppercase;
-      }
-      span {
-        letter-spacing: 6.8px;
       }
     }
     &-scroll {
       padding-top: 5%;
       text-align: center;
       animation: float 700ms infinite;
-      span {
-        display: block;
+      a {
+        span {
+          display: block;
+        }
       }
     }
     .search-container {
@@ -172,9 +177,7 @@ h2 {
         button[type="submit"] {
           height: 100%;
           width: 25%;
-          position: absolute;
-          right: 0;
-          top: 0;
+          @include position-absolute-0;
           box-shadow: inset 0px 0px 0px 2px $primary-color;
           &:focus {
             box-shadow: none;
@@ -253,6 +256,11 @@ h2 {
   &__description {
     width: 55vw;
     padding-top: 15%;
+    h2 {
+      font-family: "Aleo", serif;
+      font-size: 2.25rem;
+      padding-bottom: 1.5rem;
+    }
 
     p {
       color: $description-color;
@@ -364,77 +372,37 @@ h2 {
 }
 
 .section-4 {
-  height: 100vh;
-  width: 100%;
+  @include section-size-100-relative;
   @include background-image("../img/page4/grand-spain-1.png");
-  position: relative;
   &__description {
     position: absolute;
     top: 33%;
     left: 20%;
-    width: 460px;
-    min-height: 300px;
-    background-color: #232323de;
-    // opacity: 90%;
-    padding: 2rem;
-    h4 {
-      text-transform: uppercase;
-      margin: 1rem 0;
-    }
-    p {
-      margin-top: 0;
-    }
-    button {
-      margin-top: 1rem;
-      padding: 1rem 3.5rem;
-    }
+    @include section-block;
   }
 }
 
 .section-5 {
-  height: 100vh;
-  width: 100%;
+  @include section-size-100-relative;
   @include background-image("../img/page5/grand-spain-2.png");
-  position: relative;
   &__description {
     position: absolute;
     top: 33%;
     left: 55%;
-    width: 460px;
-    min-height: 300px;
-    background-color: #232323de;
-    padding: 2rem;
-    h4 {
-      text-transform: uppercase;
-      margin: 1rem 0;
-    }
-    p {
-      margin-top: 0;
-    }
-    button {
-      margin-top: 1rem;
-      padding: 1rem 3.5rem;
-    }
+    @include section-block;
   }
 }
 
 .section-6 {
-  height: 100vh;
-  width: 100%;
+  @include section-size-100-relative;
   @include background-image("../img/page6/what-our-tourists-say.png");
-  position: relative;
-  // display: flex;
-  // justify-content: center;
   h3 {
     text-align: center;
     margin: 0;
     padding: 5rem 0;
   }
   &__content {
-    // margin-top: 5rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    @include d-flex-center;
     height: 230px;
     .section-6__content-img {
       width: 360px;
@@ -448,13 +416,11 @@ h2 {
       font-family: fontAwesome, sans-serif;
       background-color: #333333;
       h4 {
-        text-transform: uppercase;
         padding-top: 1rem;
         margin-bottom: -0.8rem;
       }
       img {
         width: 2rem;
-        // padding: 0;
         margin-bottom: -0.5rem;
       }
     }
@@ -468,13 +434,6 @@ h2 {
   background-color: #333333;
   @include d-flex-column-center;
   justify-content: center;
-  .company-logo {
-    text-transform: uppercase;
-  }
-  h4 {
-    // margin-top: 5rem;
-    text-transform: uppercase;
-  }
   span {
     padding: 0.5rem 0 1.5rem 0;
   }

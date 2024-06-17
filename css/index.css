@@ -80,60 +80,9 @@
   font-family: "Aleo", serif;
 }
 
-.f-s14 {
-  font-size: 0.8rem;
-}
-
-.f-s20 {
-  font-size: 1.25rem;
-}
-
-.f-s22 {
-  font-size: 1.3rem;
-}
-
-.f-s24 {
-  font-size: 1.5rem;
-}
-
-.f-s36 {
-  font-size: 2.25rem;
-}
-
-.fw-700 {
-  font-weight: 700;
-}
-
-.lh-11 {
-  line-height: 1.1;
-}
-
-.lh-16 {
-  line-height: 1.6;
-}
-
-.lh-18 {
-  line-height: 1.8;
-}
-
-.ls-16 {
-  letter-spacing: 1.6px;
-}
-
-.ls-24 {
-  letter-spacing: 2.4px;
-}
-
-.ls-28 {
-  letter-spacing: 2.8px;
-}
-
-.pb-15 {
-  padding-bottom: 0.9rem;
-}
-
 * {
   box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -166,10 +115,72 @@ a {
   background-color: #7788d2;
 }
 
-h2 {
-  font-family: "Aleo", serif;
+.f-s14 {
+  font-size: 0.8rem;
+}
+
+.f-s20 {
+  font-size: 1.25rem;
+}
+
+.f-s22 {
+  font-size: 1.3rem;
+}
+
+.f-s24 {
+  font-size: 1.5rem;
+}
+
+.f-s36 {
   font-size: 2.25rem;
-  padding-bottom: 1.5rem;
+}
+
+.f-s48 {
+  font-size: 3rem;
+}
+
+.fw-700 {
+  font-weight: 700;
+}
+
+.lh-11 {
+  line-height: 1.1;
+}
+
+.lh-16 {
+  line-height: 1.6;
+}
+
+.lh-18 {
+  line-height: 1.8;
+}
+
+.ls-16 {
+  letter-spacing: 1.6px;
+}
+
+.ls-24 {
+  letter-spacing: 2.4px;
+}
+
+.ls-28 {
+  letter-spacing: 2.8px;
+}
+
+.ls-48 {
+  letter-spacing: 4.8px;
+}
+
+.ls-68 {
+  letter-spacing: 6.8px;
+}
+
+.text-upper-case {
+  text-transform: uppercase;
+}
+
+.pb-15 {
+  padding-bottom: 0.9rem;
 }
 
 .hero-page {
@@ -188,19 +199,13 @@ h2 {
 .hero-page__content-title h1 {
   margin: 0;
   padding: 0;
-  font-size: 3rem;
-  letter-spacing: 4.8px;
-  text-transform: uppercase;
-}
-.hero-page__content-title span {
-  letter-spacing: 6.8px;
 }
 .hero-page__content-scroll {
   padding-top: 5%;
   text-align: center;
   animation: float 700ms infinite;
 }
-.hero-page__content-scroll span {
+.hero-page__content-scroll a span {
   display: block;
 }
 .hero-page__content .search-container {
@@ -293,6 +298,11 @@ h2 {
 .why-us__description {
   width: 55vw;
   padding-top: 15%;
+}
+.why-us__description h2 {
+  font-family: "Aleo", serif;
+  font-size: 2.25rem;
+  padding-bottom: 1.5rem;
 }
 .why-us__description p {
   color: #e8e8e8;
@@ -403,10 +413,10 @@ h2 {
 .section-4 {
   height: 100vh;
   width: 100%;
+  position: relative;
   background-image: url("../img/page4/grand-spain-1.png");
   background-repeat: no-repeat;
   background-size: cover;
-  position: relative;
 }
 .section-4__description {
   position: absolute;
@@ -432,10 +442,10 @@ h2 {
 .section-5 {
   height: 100vh;
   width: 100%;
+  position: relative;
   background-image: url("../img/page5/grand-spain-2.png");
   background-repeat: no-repeat;
   background-size: cover;
-  position: relative;
 }
 .section-5__description {
   position: absolute;
@@ -461,10 +471,10 @@ h2 {
 .section-6 {
   height: 100vh;
   width: 100%;
+  position: relative;
   background-image: url("../img/page6/what-our-tourists-say.png");
   background-repeat: no-repeat;
   background-size: cover;
-  position: relative;
 }
 .section-6 h3 {
   text-align: center;
@@ -473,8 +483,8 @@ h2 {
 }
 .section-6__content {
   display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
   height: 230px;
 }
 .section-6__content .section-6__content-img {
@@ -490,7 +500,6 @@ h2 {
   background-color: #333333;
 }
 .section-6__content-description h4 {
-  text-transform: uppercase;
   padding-top: 1rem;
   margin-bottom: -0.8rem;
 }
@@ -508,12 +517,6 @@ h2 {
   align-items: center;
   flex-direction: column;
   justify-content: center;
-}
-.footer .company-logo {
-  text-transform: uppercase;
-}
-.footer h4 {
-  text-transform: uppercase;
 }
 .footer span {
   padding: 0.5rem 0 1.5rem 0;

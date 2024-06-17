@@ -1,9 +1,45 @@
 // FLEXBOX
 
+@mixin d-flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 @mixin d-flex-column-center {
   display: flex;
   align-items: center;
   flex-direction: column;
+}
+
+@mixin section-size-100-relative {
+  height: 100vh;
+  width: 100%;
+  position: relative;
+}
+
+@mixin position-absolute-0 {
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+@mixin section-block {
+  width: 460px;
+  min-height: 300px;
+  background-color: #232323de;
+  padding: 2rem;
+  & h4 {
+    text-transform: uppercase;
+    margin: 1rem 0;
+  }
+  & p {
+    margin-top: 0;
+  }
+  & button {
+    margin-top: 1rem;
+    padding: 1rem 3.5rem;
+  }
 }
 
 @mixin animation($args) {
