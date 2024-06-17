@@ -298,7 +298,7 @@ a {
   @media (max-width: 750px) {
     background-position: top 10% left 20%;
     display: block;
-    padding: 0 5%;
+    padding: 30% 5%;
     &__description {
       width: 100%;
       padding-top: 10%;
@@ -309,22 +309,7 @@ a {
       }
     }
     &__pictures {
-      width: 100%;
-      height: auto;
-
-      .img1 {
-        padding-top: 10%;
-        width: 350px;
-        z-index: 0;
-        &:hover,
-        &:active {
-          z-index: 0;
-          width: 350px;
-        }
-      }
-      .img2 {
-        display: none;
-      }
+      display: none;
     }
   }
 }
@@ -333,7 +318,7 @@ a {
   padding: 0 15%;
   height: 44vh;
   width: 100%;
-  background-color: #333333;
+  background-color: $secondary-bg;
   position: relative;
 
   &__line {
@@ -369,6 +354,25 @@ a {
   &__description {
     display: block;
   }
+  @media (max-width: 769px) {
+    &__line {
+      display: none;
+    }
+    &__points {
+      margin: 0;
+      padding-top: 0.5rem;
+
+      display: block;
+      li {
+        margin: 0.5rem 0;
+        width: 100%;
+        text-align: center;
+      }
+    }
+    &__description {
+      display: block;
+    }
+  }
 }
 
 .section-4 {
@@ -379,6 +383,11 @@ a {
     top: 33%;
     left: 20%;
     @include section-block;
+    @media (max-width: 480px) {
+      top: 25%;
+      left: 5%;
+      width: 90vw;
+    }
   }
 }
 
@@ -390,6 +399,11 @@ a {
     top: 33%;
     left: 55%;
     @include section-block;
+    @media (max-width: 480px) {
+      top: 25%;
+      left: 5%;
+      width: 90vw;
+    }
   }
 }
 
@@ -404,9 +418,13 @@ a {
   &__content {
     @include d-flex-center;
     height: 230px;
-    .section-6__content-img {
+
+    &-img {
       width: 360px;
       height: 100%;
+      @media (max-width: 480px) {
+        display: none;
+      }
     }
     &-description {
       height: 230px;
@@ -414,7 +432,12 @@ a {
       padding-left: 2.5rem;
       padding-right: 1rem;
       font-family: fontAwesome, sans-serif;
-      background-color: #333333;
+      background-color: $secondary-bg;
+      @media (max-width: 480px) {
+        background-color: transparent;
+        padding: 0;
+        width: 90vw;
+      }
       h4 {
         padding-top: 1rem;
         margin-bottom: -0.8rem;
@@ -431,7 +454,7 @@ a {
   padding-top: 2rem;
   height: 30vh;
   width: 100%;
-  background-color: #333333;
+  background-color: $secondary-bg;
   @include d-flex-column-center;
   justify-content: center;
   span {
@@ -441,6 +464,10 @@ a {
     img {
       height: 15px;
       padding: 0 0.25rem;
+      transition: transform 0.3s ease-in-out;
+      &:hover {
+        transform: scale(1.5);
+      }
     }
   }
 }

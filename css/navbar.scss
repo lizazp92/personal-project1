@@ -17,6 +17,7 @@
   color: inherit;
 
   @media (max-width: 990px) {
+    position: static;
     display: flex;
     flex-direction: column;
     align-items: center;

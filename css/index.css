@@ -338,7 +338,7 @@ a {
   .why-us {
     background-position: top 10% left 20%;
     display: block;
-    padding: 0 5%;
+    padding: 30% 5%;
   }
   .why-us__description {
     width: 100%;
@@ -351,19 +351,6 @@ a {
     width: 50vw;
   }
   .why-us__pictures {
-    width: 100%;
-    height: auto;
-  }
-  .why-us__pictures .img1 {
-    padding-top: 10%;
-    width: 350px;
-    z-index: 0;
-  }
-  .why-us__pictures .img1:hover, .why-us__pictures .img1:active {
-    z-index: 0;
-    width: 350px;
-  }
-  .why-us__pictures .img2 {
     display: none;
   }
 }
@@ -409,6 +396,24 @@ a {
 .search-places__description {
   display: block;
 }
+@media (max-width: 769px) {
+  .search-places__line {
+    display: none;
+  }
+  .search-places__points {
+    margin: 0;
+    padding-top: 0.5rem;
+    display: block;
+  }
+  .search-places__points li {
+    margin: 0.5rem 0;
+    width: 100%;
+    text-align: center;
+  }
+  .search-places__description {
+    display: block;
+  }
+}
 
 .section-4 {
   height: 100vh;
@@ -437,6 +442,13 @@ a {
 .section-4__description button {
   margin-top: 1rem;
   padding: 1rem 3.5rem;
+}
+@media (max-width: 480px) {
+  .section-4__description {
+    top: 25%;
+    left: 5%;
+    width: 90vw;
+  }
 }
 
 .section-5 {
@@ -467,6 +479,13 @@ a {
   margin-top: 1rem;
   padding: 1rem 3.5rem;
 }
+@media (max-width: 480px) {
+  .section-5__description {
+    top: 25%;
+    left: 5%;
+    width: 90vw;
+  }
+}
 
 .section-6 {
   height: 100vh;
@@ -487,9 +506,14 @@ a {
   justify-content: center;
   height: 230px;
 }
-.section-6__content .section-6__content-img {
+.section-6__content-img {
   width: 360px;
   height: 100%;
+}
+@media (max-width: 480px) {
+  .section-6__content-img {
+    display: none;
+  }
 }
 .section-6__content-description {
   height: 230px;
@@ -498,6 +522,13 @@ a {
   padding-right: 1rem;
   font-family: fontAwesome, sans-serif;
   background-color: #333333;
+}
+@media (max-width: 480px) {
+  .section-6__content-description {
+    background-color: transparent;
+    padding: 0;
+    width: 90vw;
+  }
 }
 .section-6__content-description h4 {
   padding-top: 1rem;
@@ -524,6 +555,10 @@ a {
 .footer .social-media-icons img {
   height: 15px;
   padding: 0 0.25rem;
+  transition: transform 0.3s ease-in-out;
+}
+.footer .social-media-icons img:hover {
+  transform: scale(1.5);
 }
 
 /*# sourceMappingURL=index.css.map */

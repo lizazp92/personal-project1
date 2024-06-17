@@ -15,6 +15,7 @@
 }
 @media (max-width: 990px) {
   .main-navigation {
+    position: static;
     display: flex;
     flex-direction: column;
     align-items: center;
